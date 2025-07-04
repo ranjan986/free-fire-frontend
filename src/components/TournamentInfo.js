@@ -34,7 +34,7 @@ const TournamentInfo = () => {
       <ul>
         <li>🕒 Date: 5th July 2025</li>
         <li>🎮 Mode: Squad (4 Players)</li>
-        <li>🏆 Prize Pool: ₹1000</li>
+       <li>🏆 Prize Pool: ₹500 1st winner, ₹200 2nd winner</li>
         <li>💰 Entry Fee: ₹20 per player</li>
       </ul>
     </section>
