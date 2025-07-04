@@ -1,38 +1,282 @@
-.App {
+/* General Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+h1, h2, h3 {
+  color: #ffca28;
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #222, #333);
+  border-bottom: 2px solid #ffca28;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Tournament Info */
+.tournament-info {
+  background: #1c1c1c;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 10px #ffca28;
+}
+.tournament-info ul li {
+  padding: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Countdown */
+.countdown {
+  background: #222;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #ffca28;
+}
+#timer {
+  font-size: 1.5rem;
+  color: #4caf50;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* QR Payment */
+.qr-payment {
+  text-align: center;
+  margin: 40px auto;
+}
+.qr-payment img {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  border: 3px solid #ffca28;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Registration Form */
+.registration-form {
+  background: #1e1e1e;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #555;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.registration-form form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.registration-form input,
+.registration-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2c2c2c;
+  color: #fff;
+}
+.registration-form input[type="file"] {
+  background: transparent;
+}
+.registration-form button {
+  padding: 12px;
+  background: #ffca28;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.registration-form button:hover {
+  background: #ffc107;
+}
+
+/* Join Buttons */
+.join-whatsapp, .join-telegram {
+  text-align: center;
+  margin-top: 15px;
+}
+.whatsapp-btn, .telegram-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 20px;
+  background: #25d366;
+  color: #111;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.telegram-btn {
+  background: #0088cc;
+}
+
+/* Leaderboard */
+.leaderboard {
+  padding: 20px;
+  text-align: center;
+}
+#leaderboardList {
+  margin-top: 10px;
+}
+#leaderboardList li {
+  background: #222;
+  margin: 5px auto;
+  padding: 10px;
+  max-width: 500px;
+  border-left: 5px solid #ffca28;
+  border-radius: 6px;
+}
+
+/* Match History & Upcoming */
+.match-history,
+.upcoming-tournaments {
+  padding: 20px;
+  text-align: center;
+}
+.match-history ul li,
+.upcoming-tournaments .card {
+  background: #222;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 8px;
+}
+.upcoming-tournaments .card {
+  border-left: 5px solid #4caf50;
+  color: #ffca28;
+}
+
+/* Sponsor */
+.sponsor {
+  text-align: center;
+  padding: 20px;
+}
+.sponsor img {
+  width: 150px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .registration-form, .tournament-info {
+    padding: 15px;
+  }
+  .qr-payment img {
+    width: 150px;
+  }
+}
+
+
+/* Rules & Regulations Section */
+.rules {
+  background: #1b1b1b;
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 700px;
+  border-left: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+}
+.rules h2 {
+  text-align: center;
+  color: #ffca28;
+  margin-bottom: 15px;
+}
+.rules ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.rules ul li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.qr-payment #upi {
+  font-size: 1.2rem;
+  color: #ffca28;
+  margin-top: 10px;
+  display: block;
+  text-decoration: underline;
+}
+
+.qr-payment #upiId {
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 5px;
+  font-size: 1.1rem;
+} 
+.qr-payment #upiId:hover {
+  color: #81c784;
+  text-decoration: none;
+}
+
+.qr-payment button {
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.qr-payment button:hover {
+  background-color: #388e3c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#successMessage {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+}
+.hidden {
+  display: none;
 }

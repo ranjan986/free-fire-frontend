@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Header from "./components/Header";
+import TournamentInfo from "./components/TournamentInfo";
+import QRPayment from "./components/QRPayment";
+import RegisterForm from "./components/RegisterForm";
+import Rules from "./components/Rules";
+import Leaderboard from "./components/Leaderboard";
+import MatchHistory from "./components/MatchHistory";
+import UpcomingTournaments from "./components/UpcommingTournament";
+import Sponsor from "./components/Sponsor";
+import Footer from "./components/Footer"
+import JoinGroups from "./components/JoinGroup";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <TournamentInfo />
+      <QRPayment />
+      <RegisterForm />
+      <JoinGroups />
+      <Rules />
+      <Leaderboard />
+      <MatchHistory />
+      <UpcomingTournaments />
+      <Sponsor />
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
